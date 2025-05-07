@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>All Recipes</title>
+</head>
+<body>
+    <p>
+      <a href="{{ url_for('home') }}" class="btn btn-secondary">
+        ← Back to Home
+      </a>
+    </p>
+    
+    <h1>All Recipes</h1>
+    <a href="{{ url_for('add_recipe') }}">Create New Recipe</a>
+    <ul>
+        {% for recipe in recipes %}
+        <li>
+            <a href="{{ url_for('view_recipe', recipe_id=recipe.id) }}">{{ recipe.title }}</a>
+            <a href="{{ url_for('delete_recipe', recipe_id=recipe.id) }}" style="color:red;">[Delete]</a>
+        </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

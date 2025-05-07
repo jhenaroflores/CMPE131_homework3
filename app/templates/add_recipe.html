@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add New Recipe</title>
+</head>
+<body>
+    <h1>Create a New Recipe</h1>
+    <a href="{{ url_for('home') }}" class="btn btn-secondary mb-3">← Back to Home</a>
+    <form method="POST">
+        {{ form.hidden_tag() }}
+        <p>{{ form.title.label }}<br>{{ form.title(size=50) }}</p> <!-- new recipe inputs for title, description, ingredient, and instruction -->
+        <p>{{ form.description.label }}<br>{{ form.description(rows=3, cols=50) }}</p>
+        <p>{{ form.ingredients.label }}<br>{{ form.ingredients(rows=5, cols=50) }}</p>
+        <p>{{ form.instructions.label }}<br>{{ form.instructions(rows=5, cols=50) }}</p>
+        <p>{{ form.submit() }}</p>
+    </form>
+    <a href="{{ url_for('list_recipes') }}">Back to All Recipes</a>
+</body>
+</html>
+{% with messages = get_flashed_messages() %}
+  {% if messages %}
+    <div class="alert alert-success alert-dismissible fade show mt-3" role="alert">
+      {{ messages[0] }}
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+  {% endif %}
+{% endwith %}

@@ -1,0 +1,64 @@
+/* Background and layout */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #ffecd2, #fcb69f); /* Food-inspired gradient */
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Main wrapper box */
+.wrapper {
+  width: 480px;
+  background: #fffaf0;
+  color: #5c4033;
+  border-radius: 15px;
+  padding: 50px 35px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+/* Header */
+.wrapper h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  color: #e67e22;
+}
+
+/* Styled buttons */
+.btn {
+  display: inline-block;
+  background: #e67e22;
+  color: #fff;
+  padding: 12px 30px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s ease;
+  margin-top: 20px;
+}
+
+.btn:hover {
+  background: #cf711f;
+}
+
+/* Flash messages */
+.flash {
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  font-weight: bold;
+}
+
+.flash.success {
+  background-color: #2ecc71;
+  color: white;
+}
+
+.flash.error {
+  background-color: #e74c3c;
+  color: white;
+}
