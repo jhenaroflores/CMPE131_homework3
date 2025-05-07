@@ -12,6 +12,7 @@
 <body>
     <form action="{{ url_for('edit_recipe', recipe_id=recipe.id) }}" method="POST">
         <h1 id="title-display">{{ recipe.title }}</h1>  <!-- recipe titles text input -->
+        <p><strong>Created on:</strong> {{ recipe.created.strftime('%B %d, %Y at %I:%M %p') }}</p>
         <input type="text" name="title" id="title-input" value="{{ recipe.title }}" style="display:none;">
 
         <p><strong>Description:</strong><br>
