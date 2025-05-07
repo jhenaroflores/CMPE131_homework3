@@ -15,7 +15,7 @@ Follow these steps to set up and run the app locally:
 - git clone https://github.com/jhenaroflores/CMPE131_homework3.git
 - cd CMPE131_homework3
 
-### 2. Create and activate a virtual environment
+### 2. Create and activate a virtual environment *IMPORTANT*
 - python3 -m venv venv
 - source venv/bin/activate  
 
