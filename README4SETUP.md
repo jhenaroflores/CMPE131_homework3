@@ -17,7 +17,10 @@ Follow these steps to set up and run the app locally:
 
 ### 2. Create and activate a virtual environment *(IMPORTANT)*
 - python3 -m venv venv
-- source venv/bin/activate  
+- source venv/bin/activate
+
+### 3. Install dependencies
+pip install -r requirements.txt
 
 ### 3. Running the application
 python3 run.py
